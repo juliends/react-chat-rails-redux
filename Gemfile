@@ -16,6 +16,7 @@ gem 'jquery-rails'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
+gem 'webpacker', '~> 3.0'
 
 group :development, :test do
   gem 'binding_of_caller'
