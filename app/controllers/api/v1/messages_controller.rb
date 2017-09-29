@@ -10,6 +10,7 @@ class Api::V1::MessagesController < ApplicationController
   end
 
   def create
+    sz
   end
 
   private

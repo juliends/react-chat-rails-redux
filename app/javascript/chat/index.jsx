@@ -10,6 +10,7 @@ import App from './components/app';
 import messagesReducer from './reducers/messages_reducer';
 
 const chatContainer = document.getElementById('chat_app');
+const channel = chatContainer.dataset.channel
 
 const initialState = {
   messages: [],

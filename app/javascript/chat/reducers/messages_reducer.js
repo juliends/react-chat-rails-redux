@@ -13,4 +13,4 @@ export default function messagesReducer(state = null, action) {
     default:
       return state;
   }
-}
+};
