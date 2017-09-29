@@ -3,7 +3,9 @@ class Api::V1::MessagesController < ApplicationController
   before_action :set_channel
   
   def index
-    @messages = Message.where(channel: @channel)
+    @messages = Message.select(['id', 'created_at'])
+                       .joins(:channel).select('name')
+                       .joins(:user).select(['email as author, content'])
     render json: @messages
   end
 
