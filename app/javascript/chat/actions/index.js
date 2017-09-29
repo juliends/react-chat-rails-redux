@@ -1,8 +1,8 @@
-const BASE_URL = 'https://wagon-chat.herokuapp.com';
+const BASE_URL = '/api/v1';
 
 export function fetchMessages(channel) {
   const url = `${BASE_URL}/${channel}/messages`;
-  const promise = fetch(url).then(r => r.json());
+  const promise = fetch(url,{ credentials: "same-origin" }).then(r => r.json());
 
   return {
     type: 'FETCH_MESSAGES',
