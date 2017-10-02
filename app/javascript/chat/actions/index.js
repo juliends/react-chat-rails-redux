@@ -10,6 +10,7 @@ export function fetchMessages(channel) {
 }
 
 export function createMessage(channel, author, content) {
+  debugger
   const url = `${BASE_URL}/${channel}/messages`;
   const body = { author, content }; // ES6 destructuring
   const promise = fetch(url, {
