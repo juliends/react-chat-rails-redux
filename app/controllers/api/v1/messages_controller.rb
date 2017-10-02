@@ -11,11 +11,11 @@ class Api::V1::MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.new(content: params[:content])
-    @message.channel = @channel
-    @message.user = current_user
-    @message.save
-    render json: message
+    @message = Message.create(content: params[:content], channel: @channel, user: current_user)
+    @json = @message.as_json
+    @json["channel"] = @channel.name
+    @json["author"] = current_user.email
+    render json: @json
   end
 
   private

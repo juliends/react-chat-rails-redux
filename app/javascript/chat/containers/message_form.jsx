@@ -45,4 +45,4 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({ createMessage }, dispatch);
 }
 
-export default connect(mapDispatchToProps)(MessageForm);
+export default connect(null, mapDispatchToProps)(MessageForm);

@@ -19,10 +19,9 @@ export function createMessage(channel, csrfToken, content) {
       'Content-Type': 'application/json',
       'X-CSRF-Token': csrfToken
     },
-    'credentials': 'same-origin',
+    credentials: 'same-origin',
     body: JSON.stringify(body)
   }).then(r => r.json());
-
   return {
     type: 'MESSAGE_POSTED',
     payload: promise // Will be resolved by redux-promise
@@ -33,5 +32,5 @@ export function selectChannel(channel) {
   return {
     type: 'CHANNEL_SELECTED',
     payload: channel
-  }
+  };
 }
