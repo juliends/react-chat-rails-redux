@@ -18,9 +18,9 @@ class MessageForm extends Component {
   }
 
   handleSubmit = (event) => {
-    console.log(this.props.selectedChannel);
+    const csrfToken = document.querySelector('meta[name="csrf-token"]').attributes.content.value;
     event.preventDefault();
-    this.props.createMessage(this.props.selectedChannel, this.props.currentUser, this.state.value);
+    this.props.createMessage(this.props.selectedChannel, csrfToken, this.state.value);
     this.setState({ value: '' });
   }
 
