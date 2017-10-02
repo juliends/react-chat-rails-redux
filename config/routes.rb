@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   
   resources :channels, only: [ :show ]
   root to: 'channels#show'
-
+  
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :channels, only: [] do
