@@ -28,6 +28,13 @@ export function createMessage(channel, csrfToken, content) {
   };
 }
 
+export function appendMessage(message) {
+  return {
+    type: 'MESSAGE_POSTED',
+    payload: message
+  }
+}
+
 export function selectChannel(channel) {
   return {
     type: 'CHANNEL_SELECTED',
