@@ -4,7 +4,10 @@ development:
 test:
   adapter: async
 
-production:
-  adapter: redis
-  url: redis://localhost:6379/1
-  channel_prefix: react-chat-rails-redux_production
+  production:
+    :url: redis://redistogo:55b62bf5289255323d5f2279fe71ee18@jack.redistogo.com:11699/
+    :host: thing.redistogo.com
+    :port: 11662
+    :password: 44ec00004dd4a5afe77a649acee7a8f3
+    :inline: true
+    :timeout: 1
